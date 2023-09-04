@@ -30,8 +30,7 @@ def fetch_from_wikipediaapi(input):
 
 def is_legit_title(str):
     # ban character that are not allowed in titles
-    illegal_char = '#><}[]|{'
-    for char in illegal_char:
+    for char in '#><}[]|{':
         if char in str:
             return False
     return True

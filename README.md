@@ -31,19 +31,37 @@ To run the project:
 
 What are the important choices I decide to make and why ?
 
-    I begin the project by service.py and I decided to make a class (Result)
-    which will save the result of the wikipediapi research from the user entry.
-    And all the function in service.py are not related to this class so they could have another use.This way the content will be easy to access on views.py and 
-    more attributes could be sent.Whenever a summary hit 20% or more of 5+ words
-    an excpetion is raised.
-    Nevertheless, the api view does the job by sending effectively the result 
-    of service. BUT, I wasn't able to make it work with request.GET.get('title')
-    and I found no or too little documentation on this. After looking closely
-    it appears that the dict request.GET is empty when get_data is running.
-    I apologize for that, if anyone know this problem and have a solution for it
-    I would be happy to know it.
+I begin the project by service.py and I decided to make a class (Result)
+which will save the result of the wikipediapi research from the user entry.
+And all the function in service.py are not related to this class so they could have another use.This way the content will be easy to access on views.py and 
+more attributes could be sent.Whenever a summary hit 20% or more of 5+ words
+an excpetion is raised.
+Nevertheless, the api view does the job by sending effectively the result 
+of service. BUT, I wasn't able to make it work with request.GET.get('title')
+and I found no or too little documentation on this. After looking closely
+it appears that the dict request.GET is empty when get_data is running.
+I apologize for that, if anyone know this problem and have a solution for it
+I would be happy to know it.
 
 
 With its user-friendly interface and powerful Django backend, it simplifies the task of gathering and analyzing Wikipedia content.
 
 Feel free to adapt and expand the description as needed to provide more context or additional details about your code.
+
+some examples:
+
+.A research about Donald_Trump:
+![Alt text](image.png)
+
+full output:
+![Alt text](image-4.png)
+
+.A research about Emmanuel_macron:
+![Alt text](image-1.png)
+
+.An example where the article does not exists (at least back in 9/4/2023):
+![Alt text](image-2.png)
+
+.An example where banned character such as '#><}[]|{' (banned character from wikipediaapi) is used within the input:
+![Alt text](image-3.png)
+
