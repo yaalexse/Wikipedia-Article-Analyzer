@@ -34,8 +34,7 @@ What are the important choices I decide to make and why ?
 I begin the project by service.py and I decided to make a class (Result)
 which will save the result of the wikipediapi research from the user entry.
 And all the function in service.py are not related to this class so they could have another use.This way the content will be easy to access on views.py and 
-more attributes could be sent.Whenever a summary hit 20% or more of 5+ words
-an excpetion is raised.
+more attributes could be sent.
 Nevertheless, the api view does the job by sending effectively the result 
 of service. BUT, I wasn't able to make it work with request.GET.get('title')
 and I found no or too little documentation on this. After looking closely
